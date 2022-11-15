@@ -2,9 +2,16 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
+import { FontAwesome } from '@expo/vector-icons'
+
 export default function Tarefa({ data }){
   return(
     <View style={styles.container}>
+
+      <TouchableOpacity>
+        <FontAwesome name="trash" size={20} color="#22272e"/>
+      </TouchableOpacity>
+      
       <Text>{data.item}</Text>
     </View>
   )
