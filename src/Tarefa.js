@@ -2,10 +2,10 @@
 import React from 'react';
 import { View, Text } from 'react-native'
 
-export default function Tarefa(){
+export default function Tarefa({ data }){
   return(
     <View>
-      <Text>TAREFA</Text>
+      <Text>{data.item}</Text>
     </View>
   )
 }

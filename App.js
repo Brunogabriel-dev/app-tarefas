@@ -24,6 +24,10 @@ export default function App(){
       key: '2',
       item: 'Estudar React Native'
     },
+    {
+      key: '3',
+      item: 'Pagar conta de luz'
+    },
 ])
 
 
@@ -51,7 +55,7 @@ export default function App(){
        <FlatList
          data={list}
          keyExtractor={ (item) => item.key}
-         renderItem={ () => <Tarefa/> }
+         renderItem={ ({ item }) => <Tarefa data={item} /> }
        />
 
     </View>
