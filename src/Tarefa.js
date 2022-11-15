@@ -8,11 +8,12 @@ export default function Tarefa({ data }){
   return(
     <View style={styles.container}>
 
-      <TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
         <FontAwesome name="trash" size={20} color="#22272e"/>
       </TouchableOpacity>
-      
+
       <Text>{data.item}</Text>
+
     </View>
   )
 }
@@ -24,5 +25,9 @@ const styles = StyleSheet.create({
     marginTop: 12,
     padding: 12,
     borderRadius: 4,
+    flexDirection: 'row'
+  },
+  button:{
+
   }
 })
