@@ -5,7 +5,7 @@ export default function App(){
   const [nome, setNome] = useState('Fulano')
 
   function handleMudaNome(){
-    alert("TESTE")
+    setNome("Sujeito Programador")
   }
 
   return(
