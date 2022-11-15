@@ -3,8 +3,9 @@ import { View, Text} from 'react-native'
 
 export default function App(){
   return(
-    <View style={{ flex:1, backgroundColor: '#ff0000'}}>
+    <View style={{ flex:1, backgroundColor: '#121212'}}>
       <Text>Bruno</Text>
+      <Text>Sujeito programador</Text>
     </View>
   )
 }
