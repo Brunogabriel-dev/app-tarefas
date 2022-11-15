@@ -10,7 +10,7 @@ import {
 import { FontAwesome } from '@expo/vector-icons'
 
 export default function App(){
-
+  const [tarefa, setTarefa] = useState('');
 
   return(
     <View style={styles.container}>
@@ -46,6 +46,27 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   containerInput:{
-    flexDirection: 'row'
+    flexDirection: 'row',
+    width: '100%',
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 22,
+  },
+  input:{
+    width: '75%',
+    backgroundColor: '#fbfbfb',
+    height: 44,
+    borderRadius: 4,
+    paddingHorizontal: 8,
+  },
+  buttonAdd:{
+    width: '15%',
+    height: 44,
+    backgroundColor: '#73f7ff',
+    marginLeft: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4
   }
 })
