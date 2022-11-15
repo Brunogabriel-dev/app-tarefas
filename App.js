@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
 export default function App(){
+  const [nome, setNome] = useState('Fulano')
+
   return(
     <View style={styles.container}>
-      <Text style={styles.title}>Bruno</Text>
-      <Text style={[styles.title, styles.text]}>Sujeito programador</Text>
+      <Text style={styles.title}>{nome}</Text>
     </View>
   )
 }
