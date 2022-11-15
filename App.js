@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 export default function App(){
   const [nome, setNome] = useState('Fulano')
@@ -7,6 +7,10 @@ export default function App(){
   return(
     <View style={styles.container}>
       <Text style={styles.title}>{nome}</Text>
+
+      <TouchableOpacity style={styles.button}>
+        <Text>Mudar nome</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -21,9 +25,13 @@ const styles = StyleSheet.create({
   title:{
     fontSize: 32,
     color: '#121212',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
-  text:{
-    color: 'red'
+  button:{
+    backgroundColor: 'blue',
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
