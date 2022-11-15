@@ -2,19 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 export default function App(){
-  const [nome, setNome] = useState('Fulano')
 
-  function handleMudaNome(){
-    setNome("Sujeito Programador")
-  }
 
   return(
     <View style={styles.container}>
-      <Text style={styles.title}>{nome}</Text>
-
-      <TouchableOpacity style={styles.button} onPress={handleMudaNome}>
-        <Text style={styles.buttonText}>Mudar nome</Text>
-      </TouchableOpacity>
+       <Text style={styles.title}>Tarefas</Text>
     </View>
   )
 }
@@ -23,24 +15,15 @@ export default function App(){
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor: '#f1f1f1',
+    backgroundColor: '#22272e',
     paddingTop: 28,
   },
   title:{
-    fontSize: 32,
-    color: '#121212',
     fontWeight: 'bold',
-    textAlign: 'center'
-  },
-  button:{
-    backgroundColor: 'blue',
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 35
-  },
-  buttonText:{
+    fontSize: 24,
     color: '#fff',
-    fontWeight: 'bold'
+    marginTop: '5%',
+    paddingStart: '5%',
+    marginBottom: 12,
   }
 })
