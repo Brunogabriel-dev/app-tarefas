@@ -4,12 +4,16 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 export default function App(){
   const [nome, setNome] = useState('Fulano')
 
+  function handleMudaNome(){
+    alert("TESTE")
+  }
+
   return(
     <View style={styles.container}>
       <Text style={styles.title}>{nome}</Text>
 
-      <TouchableOpacity style={styles.button}>
-        <Text>Mudar nome</Text>
+      <TouchableOpacity style={styles.button} onPress={handleMudaNome}>
+        <Text style={styles.buttonText}>Mudar nome</Text>
       </TouchableOpacity>
     </View>
   )
@@ -32,6 +36,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     height: 40,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 35
+  },
+  buttonText:{
+    color: '#fff',
+    fontWeight: 'bold'
   }
 })
