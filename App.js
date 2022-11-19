@@ -37,7 +37,12 @@ export default function App(){
 
 
   function handleDelete(item){
-    console.log('delete')
+    let filtroItem = list.filter( (tarefa) => {
+      return (tarefa.item !== item)
+    })
+
+    setList(filtroItem)
+
   }
 
   return(
@@ -60,7 +65,7 @@ export default function App(){
        <FlatList
          data={list}
          keyExtractor={ (item) => item.key}
-         renderItem={ ({ item }) => <Tarefa data={item} delete={ () => handleDelete(item) } /> }
+         renderItem={ ({ item }) => <Tarefa data={item} deleteItem={ () => handleDelete(item.item) } /> }
          style={styles.list}
        />
 
