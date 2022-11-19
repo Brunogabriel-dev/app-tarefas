@@ -29,7 +29,7 @@ export default function App(){
       item: tarefa
     }
 
-    setList(oldArray => [dados, ...oldArray])
+    setList(oldArray => [dados, ...oldArray]);
 
     setTarefa('')
     
@@ -37,7 +37,7 @@ export default function App(){
 
 
   function handleDelete(item){
-
+    console.log('delete')
   }
 
   return(
