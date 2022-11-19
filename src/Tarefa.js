@@ -1,4 +1,4 @@
-
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
@@ -9,7 +9,7 @@ export default function Tarefa({ data }){
     <View style={styles.container}>
 
       <TouchableOpacity style={styles.button}>
-        <FontAwesome name="trash" size={20} color="#22272e"/>
+        <FontAwesome name="trash" size={20} color="#22272e" />
       </TouchableOpacity>
 
       <Text>{data.item}</Text>
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   button:{
-
+    marginRight: 8,
   }
 })
